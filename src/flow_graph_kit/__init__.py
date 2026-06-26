@@ -17,6 +17,15 @@ from .models import (
     PortDirection,
     RuntimeToken,
 )
+from .editor_contracts import (
+    build_graph_editor_document_json_schema,
+    CORE_PATCH_OP_TYPES,
+    EDITOR_COMMAND_OP_TYPES,
+    GraphEditorDocument,
+    GraphSelection,
+    NodeLayout,
+    ViewportState,
+)
 from .patch import apply_patch, diff, invert_patch
 from .plugins import OperatorRegistry
 from .runtime import execute_graph, topo_sort
@@ -28,9 +37,16 @@ __all__ = [
     "Node",
     "Edge",
     "Graph",
+    "NodeLayout",
+    "ViewportState",
+    "GraphSelection",
+    "GraphEditorDocument",
+    "build_graph_editor_document_json_schema",
     "RuntimeToken",
     "GraphOp",
     "GraphPatch",
+    "CORE_PATCH_OP_TYPES",
+    "EDITOR_COMMAND_OP_TYPES",
     "apply_patch",
     "invert_patch",
     "diff",
